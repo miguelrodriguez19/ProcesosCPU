@@ -12,7 +12,7 @@ public class GestorAPP {
 	public static void main(String[] args) {
 		short opcion = -1;
 		inicializar();
-//		Menu
+//		Menu p
 		do {
 			System.out.println("Menu: ");
 			System.out.println("1. Introducir datos");

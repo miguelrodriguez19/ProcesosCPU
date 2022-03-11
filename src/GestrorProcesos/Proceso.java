@@ -9,7 +9,7 @@ public class Proceso implements	Comparable<Proceso> {
 	private Integer tTotal;
 	private Integer tEspera;
 	private float  penalizacion;
-	
+	//
 	public Proceso(String nombre, Integer instanteLlegada, Integer tEjecucion, Integer inicio, Integer fin,
 			Integer tTotal, Integer tEspera, float penalizacion) {
 		this.nombre = nombre;

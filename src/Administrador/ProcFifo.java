@@ -115,7 +115,7 @@ public class ProcFifo {
 		System.out.print("\n\n\n");
 		
 		
-		// Tabla de Datos
+		// Tabla de Datos.
 		for (Entry<String, ProcFifo> entry : procesoValores.entrySet()) {
 			String key = entry.getKey();
 			ProcFifo val = entry.getValue();

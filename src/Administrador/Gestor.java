@@ -79,7 +79,7 @@ public class Gestor {
 			procesos.put(nuevo.getNombre(), nuevo);
 		}
 	}
-
+//
 	private static void mostrar() {
 		for (Entry<String, Datos> entry : procesos.entrySet()) {
 			String key = entry.getKey();

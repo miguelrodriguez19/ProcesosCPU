@@ -15,7 +15,7 @@ public class Datos {
 		this.instanteLlegada = instanteLlegada;
 		this.duracion = duracion;
 	}
-
+//
 	public String getNombre() {
 		return nombre;
 	}
