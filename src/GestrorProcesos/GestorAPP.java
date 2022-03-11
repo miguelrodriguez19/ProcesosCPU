@@ -1,9 +1,10 @@
 package GestrorProcesos;
 
-import java.util.Scanner;
-import java.util.TreeSet;
-import java.util.Map.Entry;
 import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Scanner;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class GestorAPP {
 	private static Scanner in = new Scanner(System.in);
@@ -56,42 +57,42 @@ public class GestorAPP {
 	}
 
 	static void inicializar() {
-		
-		procesos.put("A", new Proceso("A", 0, 3));
-		procesos.put("B", new Proceso("B", 1, 5));
-		procesos.put("C", new Proceso("C", 3, 2));
-		procesos.put("D", new Proceso("D", 9, 5));
-		procesos.put("E", new Proceso("E", 12, 5));
+		procesos.add(new Proceso("A", 0, 3));
+		procesos.add(new Proceso("B", 1, 5));
+		procesos.add(new Proceso("C", 3, 2));
+		procesos.add(new Proceso("D", 9, 5));
+		procesos.add(new Proceso("E", 12, 5));
 	}
 
 	private static void introducirDatos() {
 		Proceso nuevo = new Proceso();
-		procesos = new HashMap();
 		System.out.print("Introduce la cantidad de procesos: ");
 		int cant = Integer.parseInt(in.nextLine());
 		for (int i = 0; i < cant; i++) {
 			System.out.print("Nombre: ");
 			nuevo.setNombre(in.nextLine());
 			System.out.print("Duración: ");
-			nuevo.setDuracion(Integer.parseInt(in.nextLine()));
+			nuevo.settEjecucion(Integer.parseInt(in.nextLine()));
 			System.out.print("Instante de llegada: ");
 			nuevo.setInstanteLlegada(Integer.parseInt(in.nextLine()));
 			System.out.println("-----------------");
-			procesos.put(nuevo.getNombre(), nuevo);
+			procesos.add(nuevo);
 		}
 	}
 
 	private static void mostrar() {
-		for (Entry<String, Proceso> entry : procesos.entrySet()) {
-			String key = entry.getKey();
-			Proceso val = entry.getValue();
-			System.out.println(val);
+		for (Proceso proceso : procesos) {
+			System.out.println(proceso.toString());
 		}
-		
+//		for (Entry<String, Proceso> entry : procesos.entrySet()) {
+//			String key = entry.getKey();
+//			Proceso val = entry.getValue();
+//			System.out.println(val);
+//		}
 	}
 	
 	private static void firstInFirstOut() {
-		Fifo.fifoGraph();
+		Ordenacion.fifo(procesos);
 	}
 
 

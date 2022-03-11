@@ -10,16 +10,10 @@ public class Proceso implements	Comparable<Proceso> {
 	private Integer tEspera;
 	private float  penalizacion;
 	//
-	public Proceso(String nombre, Integer instanteLlegada, Integer tEjecucion, Integer inicio, Integer fin,
-			Integer tTotal, Integer tEspera, float penalizacion) {
+	public Proceso(String nombre, Integer instanteLlegada, Integer tEjecucion) {
 		this.nombre = nombre;
 		this.instanteLlegada = instanteLlegada;
 		this.tEjecucion = tEjecucion;
-		this.inicio = inicio;
-		this.fin = fin;
-		this.tTotal = tTotal;
-		this.tEspera = tEspera;
-		this.penalizacion = penalizacion;
 	}
 
 	public Proceso() {
@@ -37,6 +31,70 @@ public class Proceso implements	Comparable<Proceso> {
 			return -1;
 		else
 			return 1;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Integer getInstanteLlegada() {
+		return instanteLlegada;
+	}
+
+	public void setInstanteLlegada(Integer instanteLlegada) {
+		this.instanteLlegada = instanteLlegada;
+	}
+
+	public Integer gettEjecucion() {
+		return tEjecucion;
+	}
+
+	public void settEjecucion(Integer tEjecucion) {
+		this.tEjecucion = tEjecucion;
+	}
+
+	public Integer getInicio() {
+		return inicio;
+	}
+
+	public void setInicio(Integer inicio) {
+		this.inicio = inicio;
+	}
+
+	public Integer getFin() {
+		return fin;
+	}
+
+	public void setFin(Integer fin) {
+		this.fin = fin;
+	}
+
+	public Integer gettTotal() {
+		return tTotal;
+	}
+
+	public void settTotal(Integer tTotal) {
+		this.tTotal = tTotal;
+	}
+
+	public Integer gettEspera() {
+		return tEspera;
+	}
+
+	public void settEspera(Integer tEspera) {
+		this.tEspera = tEspera;
+	}
+
+	public float getPenalizacion() {
+		return penalizacion;
+	}
+
+	public void setPenalizacion(float penalizacion) {
+		this.penalizacion = penalizacion;
 	}
 	
 	
