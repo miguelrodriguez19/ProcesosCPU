@@ -1,6 +1,6 @@
 package GestrorProcesos;
 
-public class Proceso {
+public class Proceso implements	Comparable<Proceso> {
 	private String nombre;
 	private Integer instanteLlegada;
 	private Integer tEjecucion;
@@ -28,6 +28,15 @@ public class Proceso {
 	public Object rellenarTabla (Proceso miObjeto) {
 //		mi
 		return miObjeto;
+	}
+
+	@Override
+	public int compareTo(Proceso p) {
+		// TODO Auto-generated method stub
+		if(this.instanteLlegada < p.instanteLlegada)
+			return -1;
+		else
+			return 1;
 	}
 	
 	

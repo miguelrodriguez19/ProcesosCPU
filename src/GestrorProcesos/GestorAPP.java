@@ -1,12 +1,13 @@
 package GestrorProcesos;
 
 import java.util.Scanner;
+import java.util.TreeSet;
 import java.util.Map.Entry;
 import java.util.HashMap;
 
 public class GestorAPP {
 	private static Scanner in = new Scanner(System.in);
-	static HashMap<String, Proceso> procesos;
+	static TreeSet<Proceso> procesos = new TreeSet<>(); ;
 
 	public static void main(String[] args) {
 		short opcion = -1;
@@ -55,7 +56,7 @@ public class GestorAPP {
 	}
 
 	static void inicializar() {
-		procesos = new HashMap();
+		
 		procesos.put("A", new Proceso("A", 0, 3));
 		procesos.put("B", new Proceso("B", 1, 5));
 		procesos.put("C", new Proceso("C", 3, 2));
